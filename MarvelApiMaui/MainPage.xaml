@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarvelApiMaui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="logo.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <Label
+                Text="Marvel Hero Data Generator"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Escribe a tu heroe/villano para obtener informacion"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <!-- Campo de texto para ingresar el nombre del héroe/villano -->
+            <Entry
+                x:Name="HeroEntry"
+                Placeholder="Nombre del héroe/villano"
+                SemanticProperties.Description="Campo de texto para ingresar el nombre del héroe o villano" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Generar Datos" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            <!-- Área para mostrar los datos del personaje -->
+            <Label
+                x:Name="CharacterDataLabel"
+                Text="Datos del personaje aparecerán aquí"
+                Style="{StaticResource Body}"
+                SemanticProperties.Description="Datos del personaje de Marvel" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
