@@ -24,7 +24,7 @@ namespace MarvelApiMaui.Services
                 var content = await response.Content.ReadAsStringAsync();
                 return JsonDocument.Parse(content);
             }
-            
+
             return null;
         }
 
@@ -59,6 +59,48 @@ namespace MarvelApiMaui.Services
         public async Task<JsonDocument> GetPlanetDataByIdAsync(string planetId)
         {
             var url = $"{ApiBaseUrl}/planets/{planetId}";
+            var response = await _httpClient.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonDocument.Parse(content);
+            }
+
+            return null;
+        }
+
+        public async Task<JsonDocument> GetCharactersByTransformationAsync(string transformation)
+        {
+            var url = $"{ApiBaseUrl}/characters?transformation={transformation}";
+            var response = await _httpClient.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonDocument.Parse(content);
+            }
+
+            return null;
+        }
+
+        public async Task<JsonDocument> GetTransformationByNameAsync(string transformationName)
+        {
+            var url = $"{ApiBaseUrl}/transformations?name={transformationName}";
+            var response = await _httpClient.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                return JsonDocument.Parse(content);
+            }
+
+            return null;
+        }
+
+        public async Task<JsonDocument> GetTransformationByIdAsync(string transformationId)
+        {
+            var url = $"{ApiBaseUrl}/transformations/{transformationId}";
             var response = await _httpClient.GetAsync(url);
 
             if (response.IsSuccessStatusCode)

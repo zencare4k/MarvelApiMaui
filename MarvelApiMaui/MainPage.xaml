@@ -1,23 +1,30 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MarvelApiMaui.MainPage">
+             x:Class="MarvelApiMaui.MainPage"
+             BackgroundColor="#1E1E1E">
 
-    <StackLayout Padding="20">
-        <Image Source="logo.png" HeightRequest="200" />
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+            <Image Source="logo.png" HeightRequest="200" HorizontalOptions="Center" />
 
-        <Entry x:Name="CharacterNameEntry" Placeholder="Nombre del personaje" />
-        <Button Text="Buscar Personaje por Nombre" Clicked="OnSearchCharacterByNameClicked" />
+            <Entry x:Name="CharacterNameEntry" Placeholder="Nombre del personaje" PlaceholderColor="Gray" TextColor="White" BackgroundColor="#333333" />
+            <Button Text="Buscar Personaje por Nombre" Clicked="OnSearchCharacterByNameClicked" BackgroundColor="OrangeRed" TextColor="White" />
 
-        <Entry x:Name="CharacterIdEntry" Placeholder="ID del personaje" />
-        <Button Text="Buscar Personaje por ID" Clicked="OnSearchCharacterByIdClicked" />
+            <Entry x:Name="CharacterIdEntry" Placeholder="ID del personaje" PlaceholderColor="Gray" TextColor="White" BackgroundColor="#333333" />
+            <Button Text="Buscar Personaje por ID" Clicked="OnSearchCharacterByIdClicked" BackgroundColor="OrangeRed" TextColor="White" />
 
-        <Entry x:Name="PlanetNameEntry" Placeholder="Nombre del planeta" />
-        <Button Text="Buscar Planeta por Nombre" Clicked="OnSearchPlanetByNameClicked" />
+            <Entry x:Name="PlanetNameEntry" Placeholder="Nombre del planeta" PlaceholderColor="Gray" TextColor="White" BackgroundColor="#333333" />
+            <Button Text="Buscar Planeta por Nombre" Clicked="OnSearchPlanetByNameClicked" BackgroundColor="OrangeRed" TextColor="White" />
 
-        <Entry x:Name="PlanetIdEntry" Placeholder="ID del planeta" />
-        <Button Text="Buscar Planeta por ID" Clicked="OnSearchPlanetByIdClicked" />
+            <Entry x:Name="PlanetIdEntry" Placeholder="ID del planeta" PlaceholderColor="Gray" TextColor="White" BackgroundColor="#333333" />
+            <Button Text="Buscar Planeta por ID" Clicked="OnSearchPlanetByIdClicked" BackgroundColor="OrangeRed" TextColor="White" />
 
-        <Label x:Name="ResultLabel" Text="Resultados aparecerán aquí" />
-    </StackLayout>
+            <Entry x:Name="TransformationIdEntry" Placeholder="ID de la transformación" PlaceholderColor="Gray" TextColor="White" BackgroundColor="#333333" />
+            <Button Text="Buscar Transformación por ID" Clicked="OnSearchTransformationByIdClicked" BackgroundColor="OrangeRed" TextColor="White" />
+
+            <Label x:Name="ResultLabel" Text="Resultados aparecerán aquí" TextColor="White" />
+            <Image x:Name="ResultImage" HeightRequest="200" />
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>
