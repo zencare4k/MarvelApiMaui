@@ -2,14 +2,14 @@
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace MarvelApiMaui.Services
+namespace MarvelApiMaui.Resources.Services
 {
     public class MarvelApiService
     {
         private readonly HttpClient _httpClient;
         private const string ApiBaseUrl = "https://gateway.marvel.com/v1/public";
-        private const string ApiKey = "YOUR_PUBLIC_API_KEY"; // Reemplaza con tu clave pública de la API de Marvel
-        private const string Hash = "YOUR_HASH"; // Reemplaza con el hash generado
+        private const string ApiKey = "250a786a0c54e9ef07d172c2cda35c8f"; // Reemplaza con tu clave pública de la API de Marvel
+        private const string Hash = "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=1234&hash=ffd275c5130566a2916217b101f26150"; // Reemplaza con el hash generado
         private const string Timestamp = "YOUR_TIMESTAMP"; // Reemplaza con el timestamp usado para generar el hash
 
         public MarvelApiService()
