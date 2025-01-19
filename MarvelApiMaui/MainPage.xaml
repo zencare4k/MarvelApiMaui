@@ -1,19 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MarvelApiMaui.MainPage">
 
-    <StackLayout Padding="10" Spacing="10">
-        <!-- Marvel Logo -->
-        <Image Source="logo.png" HorizontalOptions="Center" />
+    <StackLayout Padding="20">
+        <Image Source="logo.png" HeightRequest="200" />
 
-        <!-- Search Bar -->
-        <Entry x:Name="HeroEntry" Placeholder="Buscar personaje de Marvel" />
+        <Entry x:Name="CharacterNameEntry" Placeholder="Nombre del personaje" />
+        <Button Text="Buscar Personaje por Nombre" Clicked="OnSearchCharacterByNameClicked" />
 
-        <!-- Search Button -->
-        <Button Text="Buscar" Clicked="OnCounterClicked" />
+        <Entry x:Name="CharacterIdEntry" Placeholder="ID del personaje" />
+        <Button Text="Buscar Personaje por ID" Clicked="OnSearchCharacterByIdClicked" />
 
-        <!-- Character Data Display -->
-        <Label x:Name="CharacterDataLabel" Text="Información del personaje aparecerá aquí" />
+        <Entry x:Name="PlanetNameEntry" Placeholder="Nombre del planeta" />
+        <Button Text="Buscar Planeta por Nombre" Clicked="OnSearchPlanetByNameClicked" />
+
+        <Entry x:Name="PlanetIdEntry" Placeholder="ID del planeta" />
+        <Button Text="Buscar Planeta por ID" Clicked="OnSearchPlanetByIdClicked" />
+
+        <Label x:Name="ResultLabel" Text="Resultados aparecerán aquí" />
     </StackLayout>
+
 </ContentPage>
